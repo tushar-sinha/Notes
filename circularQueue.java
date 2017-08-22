@@ -9,12 +9,10 @@ class circularQueue{
 	static boolean isEmpty(){return getCount() == 0;}
 	static boolean isFull(){return getCount() == SIZE;};
 	public static void main(String[] args){
-	
 	Scanner sc = new Scanner(System.in);
 				int more = 1;
 				while(more != 0){
-					System.out.println("\nChoices:\n[1]EnQueue\n"+
-						"[2]DeQueue\n[3]DISPLAY");
+					System.out.println("\nChoices:\n[1]EnQueue\n[2]DeQueue\n[3]DISPLAY");
 					int ch = sc.nextInt();
 					switch(ch){
 						case 1 :

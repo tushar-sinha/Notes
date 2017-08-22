@@ -1,0 +1,8 @@
+=>SCFT : Managed npm installations and setting up scft on 		   local
+=>Messaging Board : End to End testing of legacy software withut any documentation
+=>Teamcity : One click deployment automation script using batch file commands
+=>Messaging Center : developing backend services, api defect fixes, UI improvements, addition of new features like whitelisting, UI validations which was completely done under me.
+confirm() - for dialog box
+onRouteChange - hook to give dialog box on route change
+
+UNIT TESTING - mocha(unit test) , chai(assertions), sinon(stubs)

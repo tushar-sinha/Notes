@@ -1,0 +1,7 @@
+stream = sequence of data
+what streams do in java :
+->it seperates what we do from how we do
+->functional in nature
+->function on whole instead of parts
+
+filter : cone like function which narrows down from data to required data
