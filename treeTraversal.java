@@ -124,6 +124,48 @@ class treeTraversal{
 		}
 		return false;
 	}
+	static void printLeaves(Node node){
+		if(node == null)
+			return;
+		printLeaves(node.left);
+		if(node.left == null && node.right == null)
+			System.out.print(node.data+" ");
+		printLeaves(node.right);
+	}
+	static void printLeft(Node node)
+	{
+		if(node == null)
+			return;
+		if(node.left!=null){
+			System.out.print(node.data+" ");
+			printLeft(node.left);
+		}
+		else if(node.right != null){
+			System.out.print(node.data+" ");
+			printLeft(node.right);
+		}
+	}
+	static void printRight(Node node){
+		if(node == null)
+			return;
+		if(node.right!=null){
+			System.out.print(node.data+" ");
+			printRight(node.right);
+		}
+		else if(node.left != null){
+			System.out.print(node.data+" ");
+			printRight(node.left);
+		}
+
+	}
+	static void boundary(Node node){
+		if(node == null)
+			return;
+		System.out.print(node.data+" ");
+		printLeft(node.left);
+		printLeaves(node);
+		printRight(node.right);
+	}
 	public static void main(String args[]){
 		Scanner sc = new Scanner(System.in);
 		ArrayList<ArrayList<Integer>> ar = new ArrayList<ArrayList<Integer>>();
@@ -135,7 +177,12 @@ class treeTraversal{
 		ob.root.left.right = new Node(5);
 		ob.root.right.left = new Node(6);
 		ob.root.right.right = new Node(7);
-		System.out.println("TREE TRAVERSAL :\n[1]PREORDER\n[2]INORDER\n[3]POSTORDER\n[4]LEVEL ORDER TRAVERSAL\n[5]MAX(iterative)\n[6]MAX(recursive)\n[7]SEARCH(Iterative)\n[8]SEARCH(RECURSIVE)");
+		ob.root.left.left.left = new Node(8);
+		ob.root.left.left.right = new Node(9);
+		ob.root.left.right.left = new Node(10);
+		ob.root.left.right.right = new Node(11);
+		System.out.println("TREE TRAVERSAL :\n[1]PREORDER\n[2]INORDER\n[3]POSTORDER\n[4]LEVEL ORDER TRAVERSAL"+
+			"\n[5]MAX(iterative)\n[6]MAX(recursive)\n[7]SEARCH(Iterative)\n[8]SEARCH(RECURSIVE)\n[9]BOUNDARY TRAVERSAL");
 		int ch = sc.nextInt();
 		switch(ch){
 			case 1:
@@ -168,6 +215,10 @@ class treeTraversal{
 			System.out.println("Enter element to search");
 			int data2 = sc.nextInt();
 			System.out.println(searchRec(ob.root,data2));
+			break;
+			case 9 :
+			System.out.println("Boundary Traversal :");
+			boundary(ob.root);
 			break;
 			default:
 			System.out.println("WRONG CHOICE!");

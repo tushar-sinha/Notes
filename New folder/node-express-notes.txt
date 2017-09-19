@@ -1,0 +1,7 @@
+body-parser : body-parser extracts the entire body portion of an incoming request stream and exposes it on req.body as something easier to interface with
+
+body-parser gives you a middleware which uses nodejs/zlib to unzip the incoming request data if it's zipped and stream-utils/raw-body to await the full, raw contents of the request body before "parsing it" 
+
+wagner : It allows you to execute async tasks based on parameter names. You register 'services' with Wagner using the factory() function. Services have a unique name - any function you pass through factory() or invoke() can list services in its parameter list.
+
+
